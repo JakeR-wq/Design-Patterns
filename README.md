@@ -1,1 +1,1 @@
-# Design-Patterns
+Design Patterns Assignments for CSCE 247
