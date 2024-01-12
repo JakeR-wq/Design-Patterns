@@ -20,6 +20,8 @@ public abstract class Player {
     public abstract void setOffenseBehavior();
 
     public String play(boolean possession) {
+        setOffenseBehavior();
+        setDefenseBehavior();
         if (possession) {
             return offenseBehavior.play();
         }
