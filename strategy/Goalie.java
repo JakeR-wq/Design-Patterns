@@ -4,21 +4,21 @@ public class Goalie extends Player{
 
     Goalie(String firstName, String lastName) {
         super(firstName, lastName);
+        setOffenseBehavior();
+        setDefenseBehavior();
     }
 
     @Override
     public void setOffenseBehavior() {
-        BlockGoalBehavior goalieStyle = new BlockGoalBehavior();
-        goalieStyle.play();
+        offenseBehavior = new BlockGoalBehavior();
     }
 
     @Override
     public void setDefenseBehavior() {
-        BlockGoalBehavior goalieStyle = new BlockGoalBehavior();
-        goalieStyle.play();
+        defenceBehavior = new BlockGoalBehavior();
     }
 
     public String toString() {
-        return super.toString();
+        return super.toString() + " plays the position GOALIE";
     }
 }

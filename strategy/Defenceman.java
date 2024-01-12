@@ -1,44 +1,36 @@
 package strategy;
 
-import java.util.Random;
-
 public class Defenceman extends Player {
 
     Defenceman(String firstName, String lastName) {
         super(firstName, lastName);
+        setOffenseBehavior();
+        setDefenseBehavior();
     }
 
     @Override
     public void setOffenseBehavior() {
-        Random rand = new Random();
         int randInt = rand.nextInt(10) + 1;
+        System.out.println(randInt);
         if (randInt < 10) {
-            PassBehavior passStyle = new PassBehavior();
-            passStyle.play();
+            offenseBehavior = new PassBehavior();
         }else if (randInt == 10) {
-            SlapShotBehavior slapStyle = new SlapShotBehavior();
-            slapStyle.play();
-        }else {
-            System.out.println("u messed up rand dude"); // DELETE
+            offenseBehavior = new SlapShotBehavior();
         }
     }
 
     @Override
     public void setDefenseBehavior() {
-        Random rand = new Random();
         int randInt = rand.nextInt(2) + 1;
+        System.out.println(randInt);
         if (randInt == 1) {
-            ChasePuckBehavior chaseStyle = new ChasePuckBehavior();
-            chaseStyle.play();
+            defenceBehavior = new ChasePuckBehavior();
         } else if (randInt == 2) {
-            BlockBehavior blockStyle = new BlockBehavior();
-            blockStyle.play();
-        } else {
-            System.out.println("You messed up random");  //DELETE
+            defenceBehavior = new BlockBehavior();
         }
     }
 
     public String toString() {
-        return super.toString();
+        return super.toString() + " plays the position DEFENCEMAN";
     }
 }

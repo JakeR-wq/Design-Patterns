@@ -1,44 +1,34 @@
 package strategy;
 
-import java.util.Random;
-
 public class Forward extends Player{
 
     Forward(String firstName, String lastName) {
         super(firstName, lastName);
+        setOffenseBehavior();
+        setDefenseBehavior();
     }
 
     @Override
     public void setOffenseBehavior() {
-        Random rand = new Random();
         int randInt = rand.nextInt(2) + 1;
         if (randInt == 1) {
-            PassBehavior passStyle = new PassBehavior();
-            passStyle.play();
+            offenseBehavior = new PassBehavior();
         } else if (randInt == 2) {
-            ShootBehavior shootStyle = new ShootBehavior();
-            shootStyle.play();
-        } else {
-            System.out.println("u messed up rand"); // DELETE
+            offenseBehavior = new ShootBehavior();
         }
     }
 
     @Override
     public void setDefenseBehavior() {
-        Random rand = new Random();
         int randInt = rand.nextInt(2) + 1;
         if (randInt == 1) {
-            ChasePuckBehavior chaseStyle = new ChasePuckBehavior();
-            chaseStyle.play();
+            defenceBehavior= new ChasePuckBehavior();
         } else if (randInt == 2) {
-            BlockBehavior blockStyle = new BlockBehavior();
-            blockStyle.play();
-        } else {
-            System.out.println("You messed up random");  //DELETE
+            defenceBehavior = new BlockBehavior();
         }
     }
 
     public String toString() {
-        return super.toString();
+        return super.toString() + " plays the position FORWARD";
     }
 }

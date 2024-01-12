@@ -12,6 +12,7 @@ public abstract class Player {
     Player(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.rand = new Random();
     }
 
     public abstract void setDefenseBehavior();
@@ -19,10 +20,10 @@ public abstract class Player {
     public abstract void setOffenseBehavior();
 
     public String play(boolean possession) {
-        if(possession) {
-            return "Has possession";
+        if (possession) {
+            return offenseBehavior.play();
         }
-        return "Doesn't have Possession";
+        return defenceBehavior.play();
     }
 
     public String toString() {

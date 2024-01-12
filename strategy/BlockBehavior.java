@@ -24,3 +24,4 @@ public class BlockBehavior implements DefenceBehavior {
         return playStyle;
     }
 }
+
