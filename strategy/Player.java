@@ -2,7 +2,7 @@ package strategy;
 
 import java.util.Random;
 
-public abstract class Player implements DefenceBehavior, OffenceBehavior {
+public abstract class Player {
     private String firstName;
     private String lastName;
     protected DefenceBehavior defenceBehavior;
@@ -19,11 +19,14 @@ public abstract class Player implements DefenceBehavior, OffenceBehavior {
     public abstract void setOffenseBehavior();
 
     public String play(boolean possession) {
-
+        if(possession) {
+            return "Has possession";
+        }
+        return "Doesn't have Possession";
     }
 
     public String toString() {
-
+        return this.firstName + " " + this.lastName;
     }
 
 

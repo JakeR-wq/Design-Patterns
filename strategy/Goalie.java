@@ -6,15 +6,19 @@ public class Goalie extends Player{
         super(firstName, lastName);
     }
 
+    @Override
     public void setOffenseBehavior() {
-
+        BlockGoalBehavior goalieStyle = new BlockGoalBehavior();
+        goalieStyle.play();
     }
 
+    @Override
     public void setDefenseBehavior() {
-
+        BlockGoalBehavior goalieStyle = new BlockGoalBehavior();
+        goalieStyle.play();
     }
 
     public String toString() {
-        
+        return super.toString();
     }
 }
