@@ -2,6 +2,8 @@ package strategy;
 
 import java.util.Random;
 
+// implementation of the play function for blocking defense behavior
+// 33% chance for each string to be returned
 public class BlockBehavior implements DefenceBehavior {
     public String play() {
         Random rand = new Random();
@@ -18,7 +20,7 @@ public class BlockBehavior implements DefenceBehavior {
                 playStyle = "checks player with puck";
                 break;
             default:
-                playStyle = "dont get here plsplsplsplspls";
+                playStyle = "blocks player from shooting";
 
         }
         return playStyle;
