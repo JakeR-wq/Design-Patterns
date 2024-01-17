@@ -20,6 +20,15 @@ public class Cartel implements Observer{
 
     @Override
     public String getLog() {
-        return "h";
+        StringBuilder logBuilder = new StringBuilder();
+
+        for (Sighting sighting : sightings) {
+            logBuilder.append(sighting.getLocation())
+                    .append(" (").append(sighting.getDetails()).append("), with ")
+                    .append(String.join(", ", sighting.getAccomplices()))
+                    .append("\n");
+        }
+
+        return logBuilder.toString();
     }
 }

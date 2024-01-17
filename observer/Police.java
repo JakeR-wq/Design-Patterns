@@ -39,13 +39,18 @@ public class Police implements Observer{
      */
     @Override
     public void update(String location, String description, ArrayList<String> accomplices) {
+        // adding location
         this.locations.add(location);
+
+        // updating notes with description
         String oldDes = this.notes;
         if (oldDes == null) {
             this.notes = description + "\n";
         } else {
             this.notes = oldDes + description + "\n";
         }
+
+        // adding accomplices, taking out duplicate accomplices
         for (String accomplice : accomplices) {
             if (!people.contains(accomplice)) {
                 people.add(accomplice);

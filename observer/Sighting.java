@@ -22,6 +22,6 @@ public class Sighting {
     }
 
     public ArrayList<String> getAccomplices() {
-        return new ArrayList<>(accomplices); // Return a copy to avoid external modification
+        return new ArrayList<>(accomplices); // returns a copy
     }
 }
