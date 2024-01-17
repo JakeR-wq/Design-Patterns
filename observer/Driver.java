@@ -13,7 +13,7 @@ public class Driver {
 		heinzenberg.enterSighting("Laundrymat", "Doing his Laundry...", "Wife, Child");
 		heinzenberg.enterSighting("Car Wash", "Laundering Money", "Wife, Client");
 		heinzenberg.enterSighting("Lawyer", "Strategizing", "Saul, Jessie");
-
+		
 		System.out.println("\n##### DEA Notes #####");
 		System.out.println(dea.getLog());
 
