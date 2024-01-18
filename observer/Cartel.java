@@ -37,6 +37,8 @@ public class Cartel implements Observer{
      * Retrieves a formatted log containing information about observed sightings.
      *
      * @return A formatted log string with locations, details, and accomplices of observed sightings.
+     * 
+     * Formatting help: ChatGPT
      */
     @Override
     public String getLog() {

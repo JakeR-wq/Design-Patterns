@@ -50,7 +50,7 @@ public class Police implements Observer{
             this.notes = oldDes + description + "\n";
         }
 
-        // adding accomplices, taking out duplicate accomplices
+        // adding accomplices, not adding the duplicates
         for (String accomplice : accomplices) {
             if (!people.contains(accomplice)) {
                 people.add(accomplice);
@@ -64,6 +64,8 @@ public class Police implements Observer{
      * and accomplices.
      * 
      * @return The method is returning a string representation of a log.
+     * 
+     * Formatting help: ChatGPT
      */
     @Override
     public String getLog() {
