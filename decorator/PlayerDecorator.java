@@ -46,7 +46,7 @@ public abstract class PlayerDecorator extends Player {
             for (int j = 0; j < targetLength; j++) {
                 char decorChar = decorLine.charAt(j);
 
-
+                
                 if (!Character.isWhitespace(decorChar)) {
                     updatedLine.append(decorChar);
                 } else {
