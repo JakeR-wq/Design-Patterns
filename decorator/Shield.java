@@ -4,6 +4,6 @@ public class Shield extends PlayerDecorator{
 
     public Shield(Player player) {
         super(player);
-        super.IntegrateDecor(FileReader.getLines("decoratorFiles/shield.txt"));
+        super.IntegrateDecor(FileReader.getLines("decoratorTextFiles/shield.txt"));
     }
 }

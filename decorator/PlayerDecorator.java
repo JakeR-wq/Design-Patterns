@@ -13,7 +13,4 @@ public abstract class PlayerDecorator extends Player {
     protected void IntegrateDecor(ArrayList<String> decor) {
         player.lines.addAll(decor);
     }
-
-    
-
 }

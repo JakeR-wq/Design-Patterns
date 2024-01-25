@@ -5,7 +5,6 @@ public class Sword extends PlayerDecorator {
 
     public Sword(Player player) {
         super(player);
-        super.IntegrateDecor(FileReader.getLines("decoratorFiles/sword.txt"));
+        super.IntegrateDecor(FileReader.getLines("decoratorTextFiles/sword.txt"));
     }
-
 }
