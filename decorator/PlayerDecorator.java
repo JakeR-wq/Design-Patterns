@@ -36,7 +36,6 @@ public abstract class PlayerDecorator extends Player {
             decor.set(i, padString(decor.get(i), targetLength));
         }
 
-
         for (int i = 0; i < lines.size(); i++) {
             String line = lines.get(i);
             String decorLine = decor.get(i);
@@ -46,7 +45,7 @@ public abstract class PlayerDecorator extends Player {
             for (int j = 0; j < targetLength; j++) {
                 char decorChar = decorLine.charAt(j);
 
-                
+
                 if (!Character.isWhitespace(decorChar)) {
                     updatedLine.append(decorChar);
                 } else {
